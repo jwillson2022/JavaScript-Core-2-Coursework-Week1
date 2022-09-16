@@ -13,8 +13,9 @@ let car = {
   brand: "Ford",
   yearsOld: 8,
 };
+car["colour"] = "blue";
+console.log(car["colour"]); // car colour is not  an option[key] only brand: or YearsOld
 
-console.log(car["colour"]);
 
 // Example 2
 function sayHelloToUser(user) {
@@ -22,16 +23,17 @@ function sayHelloToUser(user) {
 }
 
 let user = {
-  name: "Mira"
-};
+  name: "Mira"  // should be firstName
 
+};
+user.name = user.firstName = "Mira";
 sayHelloToUser(user);
 
 // Example 3
 let myPet = {
   animal: "Cat",
   getName: function() {
-    "My pet's name is Fluffy";
+   return  "My pet's name is Fluffy"; //  missing return statment
   },
 };
 
